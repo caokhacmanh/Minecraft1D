@@ -3,3 +3,7 @@
 [Finished!]
 [Read file .\instructions\getStarted.txt]
 [Your account?]
+> admin
+[Checking for your account...]
+[You have not logged in with your account, please wait while we setting things up for you...]
+[Create file .\userConfig\admin]

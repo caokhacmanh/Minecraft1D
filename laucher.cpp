@@ -53,7 +53,13 @@ void getStarted(){
     cout << "\n";
     serverConsole("Your account?");
     getUserReply(&userAccount);
-    
+    serverConsole("Checking for your account...");
+    if(isFileExist(".\\userConfig\\" + userAccount)){
+        serverConsole("You already logged in with your account, enjoy the game!");
+    }else{
+        serverConsole("You have not logged in with your account, please wait while we setting things up for you...");
+        createFile(".\\userConfig\\" + userAccount);
+    }
 }
 
 void getUserModPack(){
