@@ -2,14 +2,11 @@
 #include ".\\funcs.cpp"
 using namespace std;
 
-// ofstream fout;
-// ifstream fin;
-
 string userInput;
+string userAccount;
 
 void getLaucherReady();
 
-void errorsCheck();
 void showInstructions();
 void getStarted();
 void getUserModPack();
@@ -27,28 +24,45 @@ int main(){
 
 
 void showInstructions(){
+    cout << "\n";
     startReadFile(".\\instructions\\getStarted.txt");
+    string readInfo = "";
+    
+    while(readInfo != "#000#"){
+        fead(&readInfo);
+        if(readInfo != "#000#") cout << readInfo << "\n";
+    }
+
+}
+
+void errorsCheck(){
+    cout << "\n";
+    serverConsole("Checking for errors...");
 }
 
 void getLaucherReady(){
+    cout << "\n";
+    refreshFile(".\\reports.txt");
     serverConsole("Loading laucher...");
     errorsCheck();
     serverConsole("Finished!");
 }   
 
-void errorsCheck(){
-    serverConsole("Checking for errors...");
-}
 
 void getStarted(){
-
+    cout << "\n";
+    serverConsole("Your account?");
+    getUserReply(&userAccount);
+    
 }
 
 void getUserModPack(){
+    cout << "\n";
 
 }
 
 void enterGame(){
+    cout << "\n";
 
 }
 

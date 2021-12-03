@@ -1,2 +1,5 @@
 g++ -std=c++11 .\laucher.cpp -o .\laucher
 [use it to compile the laucher.cpp file]
+
+getline(fin, <var>);
+[to fin entire line of file]
