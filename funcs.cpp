@@ -71,8 +71,8 @@ void serverReport(string output){
 }
 
 void startWriteFile(string fileName){
+    serverReport("Write in file " + fileName);
     fout.open(fileName);
-    // serverReport("Write in file " + "\"" + fileName + "\"");
 }
 
 void closeWriteFile(){
@@ -81,8 +81,8 @@ void closeWriteFile(){
 }
 
 void startReadFile(string fileName){
-    fin.open(fileName);
     serverReport("Read file " + fileName);
+    fin.open(fileName);
 }
 
 void closeReadFile(){

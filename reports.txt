@@ -5,5 +5,9 @@
 [Your account?]
 > admin
 [Checking for your account...]
-[You have not logged in with your account, please wait while we setting things up for you...]
-[Create file .\userConfig\admin]
+[You already logged in with your account!]
+[Do you want to use your own modpack? (y/n)]
+> y
+[Which modpack do you want to use?]
+> cheatMod pack
+[Write in file .\libraries\properties.txt]
