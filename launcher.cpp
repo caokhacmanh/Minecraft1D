@@ -71,14 +71,14 @@ void getUserModPack(){
     cout << "\n";
     serverConsole("Do you want to use your own modpack? (y/n)");
     if(getch() == 'y'){
-        userReport("y");
+        keyPressReport('y');
         serverConsole("Which modpack do you want to use?");
         getUserReply(&userInput);
         startWriteFile(".\\libraries\\properties.txt");
         fout << "Modpack: " + userInput << "\n";
     }else{
+        keyPressReport('n');
         serverConsole("Using default modpack");
-        userReport("n");
         startWriteFile(".\\libraries\\properties.txt");
         fout << "Modpack: default" << "\n";
     }

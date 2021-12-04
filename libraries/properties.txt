@@ -1,1 +1,1 @@
-Modpack: cheatMod pack
+Modpack: default

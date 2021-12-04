@@ -13,6 +13,7 @@ void serverConsole(string output);
 void serverReport(string output);
 void userReport(string output);
 void getUserReply(string *userReply);
+void keyPressReport(char key);
 
 void startWriteFile(string fileName);
 void startReadFile(string fileName);
@@ -23,6 +24,14 @@ void closeReadFile();
 void refreshFile(string fileName);
 
 ///////////////////////////////////////////////////////
+
+void keyPressReport(char key){
+    fout.close();
+    fout.open(".\\reports.txt", ios::app);
+    fout << "\'" << key << "\'\n";
+    cout << "\'" << key << "\'\n";
+    fout.close();
+}
 
 void createFile(string fileName){
     fout.open(fileName);
@@ -44,6 +53,7 @@ void userReport(string output){
 }
 
 void getUserReply(string *userReply){
+    cout << "> ";
     getline(cin, *userReply);
     userReport(*userReply);
 }
