@@ -13,7 +13,6 @@ void getUserModPack();
 void enterGame();
 
 int main(){
-
     getLaucherReady();
 
     showInstructions();
@@ -42,7 +41,8 @@ void errorsCheck(){
 
 void getLaucherReady(){
     cout << "\n";
-    refreshFile(".\\reports.txt");
+    setReportFile(".\\reports.txt");
+    refreshFile(reportFile);
     serverConsole("Loading laucher...");
     errorsCheck();
     serverConsole("Finished!");
@@ -55,16 +55,18 @@ void getStarted(){
     serverConsole("Your account?");
     getUserReply(&userAccount);
     serverConsole("Checking for your account...");
-    if(isFileExist(".\\userConfig\\" + userAccount)){
+    if(isFileExist(".\\libraries\\userConfig\\" + userAccount)){
         serverConsole("You already logged in with your account!");
     }else{
         serverConsole("You have not logged in with your account, do you want to create a new account? (y/n)");
         if(getch() == 'y'){
-            createFile(".\\userConfig\\" + userAccount);
+            createFile(".\\libraries\\userConfig\\" + userAccount);
         }else{
             goto selectAccountAgain;
         }
     }
+    startWriteFile(".\\libraries\\properties.txt");
+    fout << "User: " << userAccount << "\n";
 }
 
 void getUserModPack(){
@@ -86,6 +88,7 @@ void getUserModPack(){
 
 void enterGame(){
     cout << "\n";
-
+    serverConsole("Launching Minecraft1D ver.Beta...");
+    system(".\\libraries\\minecraft1D.exe");
 }
 

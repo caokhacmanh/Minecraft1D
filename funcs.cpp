@@ -1,6 +1,8 @@
 #include ".\\includePacks.h"
 using namespace std;
 
+string reportFile;
+
 ofstream fout;
 ifstream fin;
 
@@ -16,6 +18,7 @@ void getUserReply(string *userReply);
 void keyPressReport(char key);
 
 void startWriteFile(string fileName);
+void setReportFile(string fileName);
 void startReadFile(string fileName);
 void fead(string *variable);
 void createFile(string fileName);
@@ -25,9 +28,13 @@ void refreshFile(string fileName);
 
 ///////////////////////////////////////////////////////
 
+void setReportFile(string fileName){
+    reportFile = fileName;
+}
+
 void keyPressReport(char key){
     fout.close();
-    fout.open(".\\reports.txt", ios::app);
+    fout.open(reportFile, ios::app);
     fout << "\'" << key << "\'\n";
     cout << "\'" << key << "\'\n";
     fout.close();
@@ -47,7 +54,7 @@ bool isFileExist(string fileName)
 
 void userReport(string output){
     fout.close();
-    fout.open(".\\reports.txt", ios::app);
+    fout.open(reportFile, ios::app);
     fout << "> " << output << "\n";
     fout.close();
 }
@@ -75,7 +82,7 @@ void serverConsole(string output){
 
 void serverReport(string output){
     fout.close();
-    fout.open(".\\reports.txt", ios::app);
+    fout.open(reportFile, ios::app);
     fout << "[" << output << "]" << "\n";
     fout.close();
 }

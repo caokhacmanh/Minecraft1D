@@ -1,0 +1,4 @@
+[Loading laucher...]
+[Checking for errors...]
+[Finished!]
+[Read file .\instructions\getStarted.txt]

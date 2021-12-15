@@ -6,7 +6,10 @@
 > admin
 [Checking for your account...]
 [You already logged in with your account!]
-[Do you want to use your own modpack? (y/n)]
-'n'
-[Using default modpack]
 [Write in file .\libraries\properties.txt]
+[Do you want to use your own modpack? (y/n)]
+'y'
+[Which modpack do you want to use?]
+>  vlmodpack
+[Write in file .\libraries\properties.txt]
+[Launching Minecraft1D ver.Beta...]
