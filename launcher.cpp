@@ -77,12 +77,12 @@ void getUserModPack(){
         serverConsole("Which modpack do you want to use?");
         getUserReply(&userInput);
         startWriteFile(".\\minecraft1D\\properties.txt");
-        fout << "Modpack: " + userInput << "\n";
+        fout << "modpack: " + userInput << "\n";
     }else{
         keyPressReport('n');
         serverConsole("Using default modpack");
         startWriteFile(".\\minecraft1D\\properties.txt");
-        fout << "Modpack: default" << "\n";
+        fout << "modpack: default" << "\n";
     }
 }
 
