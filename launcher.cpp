@@ -55,17 +55,17 @@ void getStarted(){
     serverConsole("Your account?");
     getUserReply(&userAccount);
     serverConsole("Checking for your account...");
-    if(isFileExist(".\\libraries\\userConfig\\" + userAccount)){
+    if(isFileExist(".\\minecraft1D\\userConfig\\" + userAccount)){
         serverConsole("You already logged in with your account!");
     }else{
         serverConsole("You have not logged in with your account, do you want to create a new account? (y/n)");
         if(getch() == 'y'){
-            createFile(".\\libraries\\userConfig\\" + userAccount);
+            createFile(".\\minecraft1D\\userConfig\\" + userAccount);
         }else{
             goto selectAccountAgain;
         }
     }
-    startWriteFile(".\\libraries\\properties.txt");
+    startWriteFile(".\\minecraft1D\\properties.txt");
     fout << "User: " << userAccount << "\n";
 }
 
@@ -76,12 +76,12 @@ void getUserModPack(){
         keyPressReport('y');
         serverConsole("Which modpack do you want to use?");
         getUserReply(&userInput);
-        startWriteFile(".\\libraries\\properties.txt");
+        startWriteFile(".\\minecraft1D\\properties.txt");
         fout << "Modpack: " + userInput << "\n";
     }else{
         keyPressReport('n');
         serverConsole("Using default modpack");
-        startWriteFile(".\\libraries\\properties.txt");
+        startWriteFile(".\\minecraft1D\\properties.txt");
         fout << "Modpack: default" << "\n";
     }
 }
@@ -89,6 +89,8 @@ void getUserModPack(){
 void enterGame(){
     cout << "\n";
     serverConsole("Launching Minecraft1D ver.Beta...");
-    system(".\\libraries\\minecraft1D.exe");
+    system(".\\minecraft1D\\minecraft1D.exe");
+    startWriteFile(".\\minecraft1D\\properties.txt");
+    fout << "#000#\n";
+    closeWriteFile();
 }
-
