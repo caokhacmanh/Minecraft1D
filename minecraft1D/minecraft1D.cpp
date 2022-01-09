@@ -32,7 +32,7 @@ void loadProperties(){
     while(readedInfo == "#000#"){
         fin >> readedInfo;
         if(readedInfo == "modpack:"){
-            fin >> readedInfo;
+            fead(&readedInfo);
             modpack = readedInfo;
         }
     }

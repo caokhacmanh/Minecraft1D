@@ -3,13 +3,14 @@
 [Finished!]
 [Read file .\instructions\getStarted.txt]
 [Your account?]
-> admin
+> Sheyer
 [Checking for your account...]
-[You already logged in with your account!]
+[You have not logged in with your account, do you want to create a new account? (y/n)]
+[Create file .\libraries\userConfig\Sheyer]
 [Write in file .\libraries\properties.txt]
 [Do you want to use your own modpack? (y/n)]
 'y'
 [Which modpack do you want to use?]
->  vlmodpack
+> putHereAnyModpackYouWant
 [Write in file .\libraries\properties.txt]
 [Launching Minecraft1D ver.Beta...]
