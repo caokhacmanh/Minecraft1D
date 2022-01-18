@@ -1,1 +1,4 @@
-Modpack:  vlmodpack
+Player_name: admin
+Modpack: default
+asdasdadasd
+#000#

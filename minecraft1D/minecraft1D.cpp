@@ -5,36 +5,32 @@ using namespace std;
 string readedInfo = "";
 string modpack = "";
 
-void mainBoard();
+void enterSingleplayer();
 void getMainBoardReady();
 void loadProperties();
 void loadLibraries();
 
 int main(){
     getMainBoardReady();
-    mainBoard();
-    loadProperties();
-    loadLibraries();
+    enterSingleplayer();
+}
+
+//////////////////////////////
+void enterSingleplayer(){
+    serverConsole("Your world?");
+    getUserReply(&readedInfo);
+    startWriteFile(".\\minecraft1D\\properties.txt");
+    fout << "World: " << readedInfo << "\n";
+    fout << "#000#" << "\n";
+    closeWriteFile();
+    serverConsole("Entering SinglePlayer...");
+    wait(3000);
+    system(".\\minecraft1D\\singleplayer.exe");
 }
 
 void getMainBoardReady(){
     cls();
+    setReportFile(".\\reports.txt");
     serverConsole("Loading files...");
-    setReportFile("..\\ reports.txt");
 }
 
-void loadLibraries(){
-
-}
-
-void loadProperties(){
-    startReadFile(".\\propeties.txt");
-    while(readedInfo == "#000#"){
-        fin >> readedInfo;
-        if(readedInfo == "modpack:"){
-            fead(&readedInfo);
-            modpack = readedInfo;
-        }
-    }
-    closeReadFile();
-}

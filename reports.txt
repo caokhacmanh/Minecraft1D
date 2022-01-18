@@ -1,16 +1,22 @@
+[Refresh file .\minecraft1D\properties.txt]
 [Loading laucher...]
 [Checking for errors...]
 [Finished!]
 [Read file .\instructions\getStarted.txt]
 [Your account?]
-> Sheyer
+> admin
 [Checking for your account...]
-[You have not logged in with your account, do you want to create a new account? (y/n)]
-[Create file .\libraries\userConfig\Sheyer]
-[Write in file .\libraries\properties.txt]
+[You already logged in with your account!]
+[Write in file .\minecraft1D\properties.txt]
 [Do you want to use your own modpack? (y/n)]
-'y'
-[Which modpack do you want to use?]
-> putHereAnyModpackYouWant
-[Write in file .\libraries\properties.txt]
+'n'
+[Using default modpack]
+[Write in file .\minecraft1D\properties.txt]
 [Launching Minecraft1D ver.Beta...]
+[Loading files...]
+[Your world?]
+> asdasdadasd
+[Write in file .\minecraft1D\properties.txt]
+[Close writing file]
+[Entering SinglePlayer...]
+[Close writing file]

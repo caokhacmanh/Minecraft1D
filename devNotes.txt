@@ -3,3 +3,10 @@ g++ -std=c++11 .\laucher.cpp -o .\laucher
 
 getline(fin, <var>);
 [to fin entire line of file]
+
+if(GetKeyState('A') & 0x8000){
+    // codes
+}
+[use to check if key 'a' is pressed, no waiting]
+
+[startReadFile() can read the file from "this" part, but the other read file from the biggest part (.\\<something>\\<something>)]
