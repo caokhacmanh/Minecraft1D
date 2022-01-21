@@ -7,11 +7,11 @@ using namespace std;
 string playerName;
 int playerHealth = 20;
 
-bool world[borderLimit][borderLimit];
+bool worldData[borderLimit][borderLimit];
 
 void getGameReady();
-void createNewWorld();
-void loadSavedWorld();
+void createNewWorld(string worldName);
+void loadSavedWorld(string worldName);
 
 int main(){
     getGameReady();
@@ -25,14 +25,29 @@ void getGameReady(){
         if(readedInfo == "World:"){
             fin >> readedInfo;
             if(isFileExist(".\\worlds\\" + readedInfo + ".txt")){
-                loadSavedWorld();
+                loadSavedWorld(readedInfo);
             }else{
-
+                createNewWorld(readedInfo);
             }
         }
     }
 }
 
-void createNewWorld(){
+void createNewWorld(string worldName){
+    serverReport("Create new world: " + worldName);
+    for(int i = 0; i < borderLimit; i++){
+        for(int j = 0; j < borderLimit; j++){
+            worldData[i][j] = 0;
+        }
+    }
+}
+
+void loadSavedWorld(string worldName){
+    serverReport("Load saved world: " + worldName);
+    for(int i = 0; i < borderLimit; i++){
+        for(int j = 0; j < borderLimit; j++){
+            fin >> worldData[i][j];
+        }
+    }
 
 }
