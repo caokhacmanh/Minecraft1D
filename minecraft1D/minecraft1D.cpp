@@ -24,7 +24,6 @@ void enterSingleplayer(){
     fout << "#000#" << "\n";
     closeWriteFile();
     serverConsole("Entering SinglePlayer...");
-    wait(3000);
     system(".\\minecraft1D\\singleplayer.exe");
 }
 

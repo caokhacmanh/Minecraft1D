@@ -15,7 +15,7 @@
 [Launching Minecraft1D ver.Beta...]
 [Loading files...]
 [Your world?]
-> asdasdadasd
+> admin_world
 [Write in file .\minecraft1D\properties.txt]
 [Close writing file]
 [Entering SinglePlayer...]

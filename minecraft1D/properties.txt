@@ -1,4 +1,4 @@
 Player_name: admin
 Modpack: default
-asdasdadasd
+World: admin_world
 #000#
